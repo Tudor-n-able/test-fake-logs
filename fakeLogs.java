@@ -14,7 +14,7 @@ public class Test {
     private Long transactionId = 123L;
 
     void myFunc0() {
-        logger.info(String.format("Log message info: orderstatus={%s}, errorcode={%d}, user={%s}, transactionid={%d}", orderstatus, errorcode, user, transactionId));
+        logger.info(String.format("Log message info: orderstatus={%s},  transactionid={%d}", orderstatus, transactionId));
         FakeLogger fakeLogger = new FakeLogger();
         fakeLogger.error("FAKE LOGGER!!");
     }
@@ -31,7 +31,7 @@ public class Test {
         int a = 10;
 
         for(int i = 0; i < a; i++) {
-            log.warning(String.format("Log message warn: orderstatus={%s}, errorcode={%d}, user={%s}, transactionid={%d}", orderstatus, errorcode,
+            log.warning(String.format("Log message warn: orderstatus={%s},transactionid={%d}", 
                     user,
                     transactionId
             ));
